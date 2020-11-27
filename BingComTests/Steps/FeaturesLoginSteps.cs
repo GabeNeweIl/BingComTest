@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 using System.Threading;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
@@ -11,7 +10,7 @@ namespace BingComTests.Chrome.Steps
     {
         Data data = new Data();
 
-        [Given(@"Webpage bing\.com")]
+        [Given(@"I go to webpage bing\.com")]
         public void GivenWebpageBing_Com()
         {
             Hooks.driver.Navigate().GoToUrl("https://www.bing.com/");
@@ -21,8 +20,11 @@ namespace BingComTests.Chrome.Steps
         public void GivenIClickLoginLink()
         {
             Thread.Sleep(1500);
+
             WaitMethods.Wait(Hooks.driver, data._signinLink, 3000);
+
             var signinLink = Hooks.driver.FindElement(data._signinLink);
+
             signinLink.Click();
         }
 
@@ -30,15 +32,21 @@ namespace BingComTests.Chrome.Steps
         public void GivenIEnterTheFollowingDetails(Table table)
         {
             WaitMethods.Wait(Hooks.driver, data._emailField, 2000);
+
             dynamic loginData = table.CreateDynamicInstance();
+
             var emailField = Hooks.driver.FindElement(data._emailField);
+
             emailField.SendKeys((string)loginData.Email);
 
             var loginButton = Hooks.driver.FindElement(data._loginButton);
+
             loginButton.Click();
 
             WaitMethods.Wait(Hooks.driver, data._passwordField, 2000);
+
             var passwordField = Hooks.driver.FindElement(data._passwordField);
+
             passwordField.SendKeys((string)loginData.Password);
         }
 
@@ -46,6 +54,7 @@ namespace BingComTests.Chrome.Steps
         public void GivenIClickLoginButton()
         {
             var loginButton = Hooks.driver.FindElement(data._loginButton);
+
             loginButton.Click();
         }
 
@@ -53,7 +62,9 @@ namespace BingComTests.Chrome.Steps
         public void ThenIShouldSeeUserName()
         {
             WaitMethods.Wait(Hooks.driver, data._logoutLink, 2000);
+
             var expectedUserName = Hooks.driver.FindElement(data._logoutLink);
+
             Assert.AreEqual("Сойка", expectedUserName.Text);
         }
     }

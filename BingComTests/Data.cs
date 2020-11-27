@@ -1,7 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BingComTests
 {
@@ -30,6 +27,7 @@ namespace BingComTests
         public readonly By _crsTrends = By.XPath("//ul[@id='trending_now_tile']");
         //public readonly By _USALocationLink = By.XPath("//a[@href='https://www.bing.com/account/action?scope=web&setmkt=en-us&FORM=W5WA&uid=1AD0BE71&sid=0AC602E5B2BB6B8117260D6EB3D06A95']");
         public readonly By _USALocationLink = By.XPath("//*[@id='region-section-content']/div/div/div[2]/div/div[4]/div/div[3]/ul/li[67]/a");
+
         public readonly string _expectedLogin = "Сойка";
     }
 }

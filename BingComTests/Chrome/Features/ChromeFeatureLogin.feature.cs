@@ -22,13 +22,15 @@ namespace BingComTests.Chrome.Features
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Chrome Features Login")]
     [NUnit.Framework.CategoryAttribute("CFLogin")]
+    [NUnit.Framework.CategoryAttribute("Chrome")]
     public partial class ChromeFeaturesLoginFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = new string[] {
-                "CFLogin"};
+                "CFLogin",
+                "Chrome"};
         
 #line 1 "ChromeFeatureLogin.feature"
 #line hidden
@@ -38,7 +40,8 @@ namespace BingComTests.Chrome.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Chrome/Features", "Chrome Features Login", "Login on bing.com in Google Chrome and Logout", ProgrammingLanguage.CSharp, new string[] {
-                        "CFLogin"});
+                        "CFLogin",
+                        "Chrome"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,14 +80,16 @@ namespace BingComTests.Chrome.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Login on bing.com")]
+        [NUnit.Framework.DescriptionAttribute("When I enter UserName and Password on site it should be possible to interact with" +
+            " my account settings")]
         [NUnit.Framework.CategoryAttribute("loign")]
-        public virtual void LoginOnBing_Com()
+        public virtual void WhenIEnterUserNameAndPasswordOnSiteItShouldBePossibleToInteractWithMyAccountSettings()
         {
             string[] tagsOfScenario = new string[] {
                     "loign"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login on bing.com", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When I enter UserName and Password on site it should be possible to interact with" +
+                    " my account settings", null, tagsOfScenario, argumentsOfScenario);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -106,7 +111,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
-testRunner.Given("Webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.And("I go to webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 8
 testRunner.And("I click login link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -131,15 +136,15 @@ testRunner.Then("I should see UserName \'Сойка\'", ((string)(null)), ((Tech
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Logout on bing.com")]
+        [NUnit.Framework.DescriptionAttribute("When I log out, it should be possible to log in again")]
         [NUnit.Framework.CategoryAttribute("Logout")]
-        public virtual void LogoutOnBing_Com()
+        public virtual void WhenILogOutItShouldBePossibleToLogInAgain()
         {
             string[] tagsOfScenario = new string[] {
                     "Logout"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Logout on bing.com", null, tagsOfScenario, argumentsOfScenario);
-#line 16
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When I log out, it should be possible to log in again", null, tagsOfScenario, argumentsOfScenario);
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -159,16 +164,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 17
-testRunner.Given("Webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 18
-testRunner.And("I Click logout link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Given("I go to webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 19
-testRunner.When("I click logout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I Click logout link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
+testRunner.When("I click logout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 21
 testRunner.Then("We should get the login link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

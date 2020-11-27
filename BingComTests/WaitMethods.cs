@@ -1,8 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BingComTests
 {
@@ -13,6 +11,7 @@ namespace BingComTests
             try
             {
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMilliseconds(waitTime));
+
                 wait.Until(ExpectedConditions.ElementIsVisible(locator));
             }
             catch (Exception)
