@@ -22,13 +22,15 @@ namespace BingComTests.Firefox.Features
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Firefox Feature Search")]
     [NUnit.Framework.CategoryAttribute("FFSearch")]
+    [NUnit.Framework.CategoryAttribute("Firefox")]
     public partial class FirefoxFeatureSearchFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = new string[] {
-                "FFSearch"};
+                "FFSearch",
+                "Firefox"};
         
 #line 1 "FirefoxFeatureSearch.feature"
 #line hidden
@@ -38,7 +40,8 @@ namespace BingComTests.Firefox.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Firefox/Features", "Firefox Feature Search", "Search on bing.com in Firefox", ProgrammingLanguage.CSharp, new string[] {
-                        "FFSearch"});
+                        "FFSearch",
+                        "Firefox"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,22 +80,18 @@ namespace BingComTests.Firefox.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Search on bing.com")]
+        [NUnit.Framework.DescriptionAttribute("When I enter data into the search bar, the search results should be information r" +
+            "elated to my query")]
         [NUnit.Framework.CategoryAttribute("Search")]
-        [NUnit.Framework.CategoryAttribute("star")]
-        [NUnit.Framework.CategoryAttribute("wars")]
-        [NUnit.Framework.CategoryAttribute("episode")]
-        [NUnit.Framework.CategoryAttribute("vi")]
-        public virtual void SearchOnBing_Com()
+        [NUnit.Framework.CategoryAttribute("data")]
+        public virtual void WhenIEnterDataIntoTheSearchBarTheSearchResultsShouldBeInformationRelatedToMyQuery()
         {
             string[] tagsOfScenario = new string[] {
                     "Search",
-                    "star",
-                    "wars",
-                    "episode",
-                    "vi"};
+                    "data"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search on bing.com", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When I enter data into the search bar, the search results should be information r" +
+                    "elated to my query", null, tagsOfScenario, argumentsOfScenario);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -114,7 +113,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
-testRunner.Given("Webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I go to webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Search query"});
@@ -134,16 +133,18 @@ testRunner.Then("Title of page must be \'star wars episode vi - Bing\'", ((strin
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Reletad searches")]
+        [NUnit.Framework.DescriptionAttribute("When I enter data into the search bar, the search system should offer a selection" +
+            " of 8 more related queries")]
         [NUnit.Framework.CategoryAttribute("Related")]
         [NUnit.Framework.CategoryAttribute("searches")]
-        public virtual void ReletadSearches()
+        public virtual void WhenIEnterDataIntoTheSearchBarTheSearchSystemShouldOfferASelectionOf8MoreRelatedQueries()
         {
             string[] tagsOfScenario = new string[] {
                     "Related",
                     "searches"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Reletad searches", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When I enter data into the search bar, the search system should offer a selection" +
+                    " of 8 more related queries", null, tagsOfScenario, argumentsOfScenario);
 #line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -165,7 +166,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 16
-testRunner.Given("Webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I go to webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Search query"});
@@ -185,16 +186,18 @@ testRunner.Then("The number of related searches should be 8", ((string)(null)), 
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Search result")]
+        [NUnit.Framework.DescriptionAttribute("When I enter data into the search bar, the search system should give me 9 default" +
+            " search results")]
         [NUnit.Framework.CategoryAttribute("Search")]
         [NUnit.Framework.CategoryAttribute("result")]
-        public virtual void SearchResult()
+        public virtual void WhenIEnterDataIntoTheSearchBarTheSearchSystemShouldGiveMe9DefaultSearchResults()
         {
             string[] tagsOfScenario = new string[] {
                     "Search",
                     "result"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search result", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When I enter data into the search bar, the search system should give me 9 default" +
+                    " search results", null, tagsOfScenario, argumentsOfScenario);
 #line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -216,7 +219,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 25
-testRunner.Given("Webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I go to webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Search query"});

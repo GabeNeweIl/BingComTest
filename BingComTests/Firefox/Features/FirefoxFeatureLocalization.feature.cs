@@ -22,13 +22,15 @@ namespace BingComTests.Firefox.Features
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Firefox Feature Localization")]
     [NUnit.Framework.CategoryAttribute("FFLocalization")]
+    [NUnit.Framework.CategoryAttribute("Firefox")]
     public partial class FirefoxFeatureLocalizationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = new string[] {
-                "FFLocalization"};
+                "FFLocalization",
+                "Firefox"};
         
 #line 1 "FirefoxFeatureLocalization.feature"
 #line hidden
@@ -38,7 +40,8 @@ namespace BingComTests.Firefox.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Firefox/Features", "Firefox Feature Localization", "Change of localization and language\r\non bing.com in Firefox", ProgrammingLanguage.CSharp, new string[] {
-                        "FFLocalization"});
+                        "FFLocalization",
+                        "Firefox"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,14 +80,16 @@ namespace BingComTests.Firefox.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Change language")]
+        [NUnit.Framework.DescriptionAttribute("When I go to the language menu and change language on \"English\" then the browser " +
+            "localization changed")]
         [NUnit.Framework.CategoryAttribute("language")]
-        public virtual void ChangeLanguage()
+        public virtual void WhenIGoToTheLanguageMenuAndChangeLanguageOnEnglishThenTheBrowserLocalizationChanged()
         {
             string[] tagsOfScenario = new string[] {
                     "language"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change language", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When I go to the language menu and change language on \"English\" then the browser " +
+                    "localization changed", null, tagsOfScenario, argumentsOfScenario);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -106,7 +111,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
-testRunner.Given("Webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I go to webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
 testRunner.And("I click menu bar link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -128,14 +133,16 @@ testRunner.Then("Images link should be \'Images\'", ((string)(null)), ((TechTalk
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Change location")]
+        [NUnit.Framework.DescriptionAttribute("When I Go to the location menu and change location on \"USA\" then the browser modi" +
+            "fies query results based on the specified location")]
         [NUnit.Framework.CategoryAttribute("Location")]
-        public virtual void ChangeLocation()
+        public virtual void WhenIGoToTheLocationMenuAndChangeLocationOnUSAThenTheBrowserModifiesQueryResultsBasedOnTheSpecifiedLocation()
         {
             string[] tagsOfScenario = new string[] {
                     "Location"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change location", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When I Go to the location menu and change location on \"USA\" then the browser modi" +
+                    "fies query results based on the specified location", null, tagsOfScenario, argumentsOfScenario);
 #line 16
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -157,7 +164,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 17
-testRunner.Given("Webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I go to webpage bing.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 18
 testRunner.And("I click menu bar link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

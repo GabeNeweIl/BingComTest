@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 using System.Threading;
 using TechTalk.SpecFlow;
 
@@ -9,12 +8,16 @@ namespace BingComTests.Chrome.Steps
     public class ChromeFeatureLanguageSteps
     {
         Data data = new Data();
+
         [Given(@"I click menu bar link")]
         public void GivenIClickMenuBarLink()
         {
             Thread.Sleep(2000);
+
             WaitMethods.Wait(Hooks.driver, data._menubarLink, 2000);
+
             var menubarLink = Hooks.driver.FindElement(data._menubarLink);
+
             menubarLink.Click();
         }
         
@@ -22,7 +25,9 @@ namespace BingComTests.Chrome.Steps
         public void GivenIClickSettingsLink()
         {
             WaitMethods.Wait(Hooks.driver, data._settingLink, 1000);
+
             var settingLink = Hooks.driver.FindElement(data._settingLink);
+
             settingLink.Click();
         }
         
@@ -30,7 +35,9 @@ namespace BingComTests.Chrome.Steps
         public void GivenIClickLanguageLink()
         {
             WaitMethods.Wait(Hooks.driver, data._languageLink, 1000);
+
             var languageLink = Hooks.driver.FindElement(data._languageLink);
+
             languageLink.Click();
         }
         
@@ -38,7 +45,9 @@ namespace BingComTests.Chrome.Steps
         public void WhenIClickOnLinkOfEnglishLocalization()
         {
             WaitMethods.Wait(Hooks.driver, data._englishLanguage, 2000);
+
             var englishLanguageLink = Hooks.driver.FindElement(data._englishLanguage);
+
             englishLanguageLink.Click();
         }
         
@@ -46,7 +55,9 @@ namespace BingComTests.Chrome.Steps
         public void ThenImagesLinkShouldBe(string p0)
         {
             var imagesText = Hooks.driver.FindElement(data._imagesLink);
+
             string expectedText = "Images";
+
             Assert.AreEqual(expectedText, imagesText.Text, $"Not equal! Actual text {imagesText.Text}");
         }
     }
